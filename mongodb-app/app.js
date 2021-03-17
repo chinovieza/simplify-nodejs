@@ -20,7 +20,7 @@ const studentSchema = new mongoose.Schema({
     score: {type:Number, default:0}
 });
 
-const Student = mongoose.model('Student', studentSchema);
+const Student = mongoose.model('students', studentSchema);
 
 async function createStudent() {
 
@@ -62,13 +62,6 @@ async function createStudent() {
 //         console.log(err);
 //     });
 
-const student = Student({
-    name: "Franky",
-    age: 36,
-    classRoom: "6/1",
-    occupation: "Shipwright"
-});
-
 const createStudent2 = async () => {
     const student = Student({
         name: "Franky",
@@ -81,3 +74,43 @@ const createStudent2 = async () => {
 } 
 
 // createStudent2();
+
+
+//------ GET --------//
+
+async function getAllStudents() {
+    const data = await Student.find();
+    console.log('-> Get all students <-');
+    console.log(data);
+}
+
+async function getStudentsByCondition(condition) {
+    const data = await Student.find(condition);
+    console.log('-> Get all students by condtion <-');
+    console.log(data);
+}
+
+async function getSortAgeStudent() {
+    const data = await Student
+    .find({classRoom:"6/1"})
+    .sort({age: -1});
+    console.log('-> Get sort age students  <-');
+    console.log(data);
+}
+
+async function getSortAgeLimitStudent() {
+    const data = await Student
+    .find({classRoom:"6/1"})
+    .sort({age: 1})
+    .limit(2);
+    console.log('-> Get sort age limit students  <-');
+    console.log(data);
+}
+
+getAllStudents();
+const q1 = {classRoom:"6/1"};
+getStudentsByCondition(q1);
+const q2 = {classRoom:"6/1", skills:"Sword"};
+getStudentsByCondition(q2);
+getSortAgeStudent();
+getSortAgeLimitStudent();
