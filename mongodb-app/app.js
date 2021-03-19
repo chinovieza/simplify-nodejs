@@ -167,10 +167,29 @@ async function getNameStartWithSStudent() {
     console.log(data);
 }
 
-async function getNamEndWithPerStudent() {
+async function getNameEndWithPerStudent() {
     const data = await Student
     .find({name: /per$/}); // end with "per"
     console.log('-> Get student that name end with per <-');
+    console.log(data);
+}
+
+async function getCountStudents() {
+    const data = await Student
+    .find()
+    .countDocuments();
+    console.log('-> Get count students <-');
+    console.log(data);
+}
+
+async function getPagingStudents() {
+    var pageSize = 5;
+    var pageNumber = 2;
+    const data = await Student
+    .find()
+    .skip((pageNumber - 1) * pageSize)
+    .limit(pageSize);
+    console.log('-> Get all students page 2 / 5 items per page <-');
     console.log(data);
 }
 
@@ -189,4 +208,6 @@ getIn70_80_90Student();
 get61AndScoreGt90Student();
 get62Or63Student();
 getNameStartWithSStudent();
-getNamEndWithPerStudent();
+getNameEndWithPerStudent();
+getCountStudents();
+getPagingStudents();
