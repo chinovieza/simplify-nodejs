@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link 
+        rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    >
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <h2 class="alert-secondary p-3">พยากรณ์อากาศ</h2>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <hr />
+        </div>
+        <div class="row text-center">
+            <div class="col-md-3 d-sm-none d-md-block"></div>
+            <div class="col-sm-6 col-md-3 mx-md-auto">
+                    <div 
+                        type="button"
+                        class="btn btn-lg btn-success p-4 mt-1 mb-1"
+                        onclick="city_form()"
+                    >
+                        จากชื่อจังหวัดหรืออำเภอ
+                    </div>
+            </div>
+            <div class="col-sm-6 col-md-3 mx-md-auto">
+                    <div 
+                        type="button"
+                        class="btn btn-lg btn-primary p-4 mt-1 mb-1"
+                        onclick="location_form()"
+                    >
+                        จากพิกัดเส้นรุ้งเส้นแวง
+                    </div>
+            </div>
+            <div class="col-md-3 d-sm-none d-md-block"></div>
+        </div>  
+        <div class="row mt-2">
+            <hr />
+        </div>
+        <div class="row" id="city" style="display:none;">
+            <div class="col-sm-6 mx-auto">
+                <form action="/api/city" id="form_city" class="form text-center">
+                    <div class="form-group">
+                        <label for="city">จังหวัดหรืออำเภอของประเทศไทย</label>
+                        <select name="city" class="form-control ml-2" id="city">
+                            <option value="">เลือก</option>
+                            <% lists.forEach(function(list){ %>
+                                <option value="<%= list.name %>"><%= list.name %></option>
+                            <% }) %>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">พยากรณ์</button>
+                </form>
+            </div>
+        </div>
+        <div class="row" id="location" style="display:none;">
+            <div class="col-6 mx-auto">
+                <form action="/api/coordinate" id="form_location" class="text-center">
+                    <div class="form-group">
+                        <label for="lon">เส้นแวง (Longitude)</label>
+                        <input name="lon" type="number" step="0.0001" class="form-control" id="lon" placeholder="0.0000">
+                    </div>
+                    <div class="form-group">
+                        <label for="lat">เส้นรุ่ง (Latitude)</label>
+                        <input name="lat" type="number" step="0.0001" class="form-control" id="lat" placeholder="0.0000">
+                    </div>
+                    <button type="submit" class="btn btn-primary">พยากรณ์</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function city_form() {
+            document.getElementById("city").style.display = "block";
+            document.getElementById("location").style.display = "none";
+        }
+        function location_form() {
+            document.getElementById("city").style.display = "none";
+            document.getElementById("location").style.display = "block";
+        }
+    </script>
+</body>
+</html>

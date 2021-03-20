@@ -1,0 +1,290 @@
+[
+   {
+      "id":1,
+      "name":"Prakhon Chai",
+      "coord":{
+         "lon":103.120811,
+         "lat":14.60592
+      },
+      "country":"TH"
+   },
+   {
+      "id":2,
+      "name":"Changwat Lop Buri",
+      "coord":{
+         "lon":100.75,
+         "lat":14.93333
+      },
+      "country":"TH"
+   },
+   {
+      "id":3,
+      "name":"Changwat Nakhon Si Thammarat",
+      "coord":{
+         "lon":100,
+         "lat":8.25
+      },
+      "country":"TH"
+   },
+   {
+      "id":4,
+      "name":"Ban Thung That",
+      "coord":{
+         "lon":99.583328,
+         "lat":8.26667
+      },
+      "country":"TH"
+   },
+   {
+      "id":5,
+      "name":"Changwat Chumphon",
+      "coord":{
+         "lon":98.833328,
+         "lat":10.33333
+      },
+      "country":"TH"
+   },
+   {
+      "id":6,
+      "name":"Ban Khron",
+      "coord":{
+         "lon":99.099998,
+         "lat":10.28333
+      },
+      "country":"TH"
+   },
+   {
+      "id":7,
+      "name":"Laem Ngop",
+      "coord":{
+         "lon":102.39489,
+         "lat":12.1717
+      },
+      "country":"TH"
+   },
+   {
+      "id":8,
+      "name":"Changawat Chanthaburi",
+      "coord":{
+         "lon":102.166672,
+         "lat":12.83333
+      },
+      "country":"TH"
+   },
+   {
+      "id":9,
+      "name":"Ban Pak Nam",
+      "coord":{
+         "lon":102.066673,
+         "lat":12.48333
+      },
+      "country":"TH"
+   },
+   {
+      "id":10,
+      "name":"Changwat Rayong",
+      "coord":{
+         "lon":101.433327,
+         "lat":12.83333
+      },
+      "country":"TH"
+   },
+   {
+      "id":11,
+      "name":"Ban Charoen Suk",
+      "coord":{
+         "lon":101.281387,
+         "lat":12.65972
+      },
+      "country":"TH"
+   },
+   {
+      "id":12,
+      "name":"Krung Thep Mahanakhon",
+      "coord":{
+         "lon":100.71991,
+         "lat":13.87719
+      },
+      "country":"TH"
+   },
+   {
+      "id":13,
+      "name":"Phra Khanong",
+      "coord":{
+         "lon":100.60157,
+         "lat":13.70185
+      },
+      "country":"TH"
+   },
+   {
+      "id":14,
+      "name":"Changwat Samut Prakan",
+      "coord":{
+         "lon":100.449997,
+         "lat":13.5
+      },
+      "country":"TH"
+   },
+   {
+      "id":15,
+      "name":"Ban Bang Krabueang",
+      "coord":{
+         "lon":100.558167,
+         "lat":13.70461
+      },
+      "country":"TH"
+   },
+   {
+      "id":16,
+      "name":"Ban Khlong Bang Waek",
+      "coord":{
+         "lon":100.421501,
+         "lat":13.73256
+      },
+      "country":"TH"
+   },
+   {
+      "id":17,
+      "name":"Changwat Nonthaburi",
+      "coord":{
+         "lon":100.5,
+         "lat":13.75
+      },
+      "country":"TH"
+   },
+   {
+      "id":18,
+      "name":"Bangkok",
+      "coord":{
+         "lon":100.51667,
+         "lat":13.75
+      },
+      "country":"TH"
+   },
+   {
+      "id":19,
+      "name":"Sukhumvit",
+      "coord":{
+         "lon":100.556061,
+         "lat":13.73502
+      },
+      "country":"TH"
+   },
+   {
+      "id":20,
+      "name":"Changwat Kanchanaburi",
+      "coord":{
+         "lon":99.099998,
+         "lat":14.63333
+      },
+      "country":"TH"
+   },
+   {
+      "id":21,
+      "name":"Ban Tha Po",
+      "coord":{
+         "lon":99.300468,
+         "lat":13.98872
+      },
+      "country":"TH"
+   },
+   {
+      "id":22,
+      "name":"Changwat Prachin Buri",
+      "coord":{
+         "lon":101.666672,
+         "lat":14.08333
+      },
+      "country":"TH"
+   },
+   {
+      "id":23,
+      "name":"Ban Nong Nam Khao",
+      "coord":{
+         "lon":101.240829,
+         "lat":14.02972
+      },
+      "country":"TH"
+   },
+   {
+      "id":24,
+      "name":"Changwat Nakhon Ratchasima",
+      "coord":{
+         "lon":102.166672,
+         "lat":15
+      },
+      "country":"TH"
+   },
+   {
+      "id":25,
+      "name":"Ban Huai Sakae Rat",
+      "coord":{
+         "lon":102.033333,
+         "lat":14.6
+      },
+      "country":"TH"
+   },
+   {
+      "id":26,
+      "name":"Pak Chong",
+      "coord":{
+         "lon":101.416138,
+         "lat":14.70802
+      },
+      "country":"TH"
+   },
+   {
+      "id":27,
+      "name":"Changwat Nakhon Sawan",
+      "coord":{
+         "lon":100.083328,
+         "lat":15.7
+      },
+      "country":"TH"
+   },
+   {
+      "id":28,
+      "name":"Ban Nam Song",
+      "coord":{
+         "lon":100.083328,
+         "lat":15.46667
+      },
+      "country":"TH"
+   },
+   {
+      "id":29,
+      "name":"Ban Nong Rang Ka",
+      "coord":{
+         "lon":102.01667,
+         "lat":15.46667
+      },
+      "country":"TH"
+   },
+   {
+      "id":30,
+      "name":"Changwat Maha Sarakham",
+      "coord":{
+         "lon":103.666672,
+         "lat":16.33333
+      },
+      "country":"TH"
+   },
+   {
+      "id":31,
+      "name":"Kae Dam",
+      "coord":{
+         "lon":103.384438,
+         "lat":16.02397
+      },
+      "country":"TH"
+   },
+   {
+      "id":32,
+      "name":"Changwat Yasothon",
+      "coord":{
+         "lon":104.133331,
+         "lat":15.75
+      },
+      "country":"TH"
+   }
+]
