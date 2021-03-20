@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 
+app.set('view engine', 'ejs');
+app.set('views', 'test-view');
+
 app.get('/', function(req, res) {
     res.send("Hello Homepage");
 });
@@ -10,7 +13,8 @@ app.get('/api/forcast', function(req, res) {
 });
 
 app.get('/api/coordinate', function(req, res) {
-    res.send("Weather forcast from coordinate");
+    // res.send("Weather forcast from coordinate");
+    res.render('test-template', {data: "Weather forcast from coordinate"});
 });
 
 app.get('/api/city', function(req, res) {
