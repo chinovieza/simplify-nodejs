@@ -62,4 +62,64 @@ async function updateStudentAndShow(id) {
     }
 }
 
-updateStudentAndShow("6054d1521cc80e15bb8199b1");
+// updateStudentAndShow("6054d1521cc80e15bb8199b1");
+
+async function updateStudentUpdateOne1(id) {
+    const data = await Student
+    .updateOne({_id: id}, {
+        $set: {score: 80}
+    });
+    console.log(data)
+}
+
+// updateStudentUpdateOne1("6054d1521cc80e15bb8199b1");
+// updateStudentUpdateOne1("6054d16d5dea3715c7f81be5");
+
+async function updateStudentUpdateMany1(classRoom) {
+    const data = await Student
+    .updateMany({classRoom: classRoom}, {
+        $set: {
+            classRoom: "8/1",
+            isStudying: false
+        }
+    });
+    console.log(data);
+}
+
+// updateStudentUpdateMany1("7/1");
+
+async function updateStudentUpdateManyMul(classRoom) {
+    const data = await Student
+    .updateMany({classRoom: classRoom}, {
+        $mul: {score: 0.8} //decrease score to 80%
+    });
+    console.log(data);
+}
+
+// updateStudentUpdateManyMul("8/1");
+
+async function updateStudentUpdateManyMax(classRoom) {
+    const data = await Student
+    .updateMany({classRoom: classRoom}, {
+        $max: {score: 50}
+    });
+    console.log(data);
+}
+
+// updateStudentUpdateManyMax("8/1");
+
+async function updateStudentFindOneAndUpdate(id) {
+    const data = await Student
+    .findOneAndUpdate(
+        {_id: id},
+        {$set: {score: 100}},
+        {new: true},
+        function (err, doc) {
+            //something here
+            console.log("say something");
+        }
+    );
+    console.log(data);
+}
+
+// updateStudentFindOneAndUpdate("6054d1521cc80e15bb8199b1");
